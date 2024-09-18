@@ -1,0 +1,48 @@
+{
+	"schemaVersion": 1,
+	"id": "rectify",
+	"version": "${version}",
+	"name": "Rectify",
+	"description": "A handful of handy revisions for Trickster",
+	"authors": [
+		"StellarWitch7"
+	],
+	"contact": {
+		"homepage": "https://github.com/StellarWitch7/rectify",
+		"sources": "https://github.com/StellarWitch7/rectify"
+	},
+	"license": "MIT",
+	"icon": "assets/rectify/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			{
+				"value": "stellarwitch7.rectify.Rectify",
+				"adapter": "kotlin"
+			}
+		],
+		"client": [
+			{
+				"value": "stellarwitch7.rectify.RectifyClient",
+				"adapter": "kotlin"
+			}
+		]
+	},
+	"mixins": [
+		"rectify.mixins.json",
+		{
+			"config": "rectify.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.0",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*",
+		"fabric-language-kotlin": "*",
+		"trickster": ">=2.0.0-alpha.31"
+	},
+	"suggests": {
+	}
+}
